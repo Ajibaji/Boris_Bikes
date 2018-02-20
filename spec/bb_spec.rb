@@ -1,7 +1,5 @@
 require 'BorisBike'
 
-describe DockingStation do
-  it 'is the Docking Station object' do
-
-  end
+describe "DockingStation" do
+  it { is_expected.to respond_to(:release_bike) }
 end
