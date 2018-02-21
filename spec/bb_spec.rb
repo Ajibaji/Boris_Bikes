@@ -13,7 +13,7 @@ end
 describe "docking_station.dock" do
   it "some string explanation" do
     new_dock = DockingStation.new
-    20.times { new_dock.dock(Bike.new) }
+    DockingStation::DEFAULT_CAPACITY.times { new_dock.dock(Bike.new) }
     expect {new_dock.dock(Bike.new)}.to raise_error(SecurityError)
   end
 end
