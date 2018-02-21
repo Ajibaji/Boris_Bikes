@@ -1,4 +1,3 @@
-
 require 'BorisBike'
 
 describe Bike do
