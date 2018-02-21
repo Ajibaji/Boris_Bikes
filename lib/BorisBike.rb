@@ -4,6 +4,7 @@ class DockingStation
 
   def initialize
     @bike = 0
+    @capacity = 1
   end
 
   def release_bike
@@ -12,6 +13,7 @@ class DockingStation
   end
 
   def dock_bike(bike)
+    return raise SecurityError if @bike >= @capacity
     @bike = bike
   end
 end
