@@ -1,12 +1,14 @@
 class DockingStation
 
-  attr_reader :bike
+  attr_accessor :bike
 
   def initialize
+    @bike = 0
   end
 
   def release_bike
-    @bike = Bike.new
+    return raise StandardError if @bike == 0
+    @bike = 0
   end
 
   def dock_bike(bike)
